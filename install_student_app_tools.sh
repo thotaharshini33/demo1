@@ -43,6 +43,8 @@ tar -xzvf apache-tomcat-9.0.85.tar.gz
 rm -rf apache-tomcat-9.0.85.tar.gz
 mv apache-tomcat-9.0.85 appserver
 
+sudo chown -R devops:devops /opt
+
 echo '[Unit]
         Description=Tomcat Server
         After=syslog.target network.target
