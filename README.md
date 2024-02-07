@@ -29,4 +29,33 @@ Second script helps to complete following tasks:
 Task-1:
 Task-2: 
 
-       
+
+------------------------------------------------------------
+
+Jenkins Build Stpe:
+
+Job#1: Setup App Tools
+
+Step-1: Restrict the job on Slave Node
+Step-2: Integrate with GitHub repo
+Step-3: Add Build Step 'Execute Shell'
+         sudo chmod +x install_student_app_tools.sh
+         sudo su -c "./install_student_app_tools.sh"
+
+Test the App:
+- http://192.168.33.11
+- http://192.168.33.11:8080
+- mysql -uroot
+
+Job#2: Deploy Student App
+
+Step-1: Restrict the job on Slave Node
+Step-2: Integrate with GitHub repo
+Step-3: Add Build Step 'Execute Shell'
+         sudo chmod +x setup_studentapp.sh
+         sudo su devops -c "./setup_studentapp.sh"
+
+Test the App:
+- http://192.168.33.11/student/
+- http://192.168.33.11:8080/student
+- mysql -ustudent -pstudent1
