@@ -2,9 +2,9 @@
 
 sudo setsebool -P httpd_can_network_connect 1
 
-cd /opt/
+cd /opt/student-app
 
-#git clone https://gitlab.com/rns-app/student-app.git
+git pull origin main
 
 mysql -uroot < /opt/student-app/dbscript/studentapp.sql
 
@@ -31,10 +31,8 @@ sudo systemctl start tomcat
 
 # Deploying Student App
 
-#sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
-
 cd /opt/student-app/
-git pull origin main
+
 
 echo 2 | sudo alternatives --config java
 
@@ -52,12 +50,9 @@ sudo rm -rf *
 
 cd /opt/
 
-# git clone https://gitlab.com/rns-app/static-project.git
-
 cd static-project/iPortfolio/
 
 sudo cp -R /opt/static-project/iPortfolio/* /usr/share/nginx/html/
-
 
 # Reverse Proxy Configuration
 
