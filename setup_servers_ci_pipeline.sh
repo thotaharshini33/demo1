@@ -24,6 +24,7 @@ sudo service sshd restart
 
 sudo su - devops -c "git config --global user.name 'devops'"
 sudo su - devops -c "git config --global user.email 'devops@gmail.com'"
+sudo su - devops -c "git config --global --add safe.directory '*'"
 
 sudo chown -R devops:devops /opt
 
